@@ -16,13 +16,11 @@ export default {
 }
 </script>
 
-<style>
-    header{
-        display: flex;
-        width: 100%;
-        align-items: center;
-    }
-
+<style lang="scss" >
+header{
+    display: flex;
+    width: 100%;
+    align-items: center;
     h1{
         width: 60%;
     }
@@ -34,8 +32,9 @@ export default {
         align-items: center;
         justify-content: space-around;
         flex-direction: row;
+        a{
+            display: block;
+        }
     }
-    a{
-        display: block;
-    }
+}
 </style>
