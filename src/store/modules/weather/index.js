@@ -12,17 +12,39 @@ const getters = {
 
 const actions = {
     async fetchTodayWeather({commit}, city){
-        const url = "https://kraken-weather.herokuapp.com/api/weathers/" + city;
-        console.log("fetchTodayWeather -> url", url)
-        const response = await axios.get(url)
-        console.log("fetchTodayWeather -> response", response.data)
-        commit("setTodayWeather", response.data);
+        try{
+            if(city){
+                const url = "https://kraken-weather.herokuapp.com/api/weathers/" + city;
+                const response = await axios.get(url)
+                commit("setTodayWeather", response.data);
+            }
+        }
+        catch(err){
+            console.log(err);
+        }
     },
     async fetchForecastWeather({commit}, city){
-        const url = "https://kraken-weather.herokuapp.com/api/weathers/forecast/" + city;
-        const response = await axios.get(url)
-        console.log("fetchForecastWeather -> response.data.forecast", response.data.forecast.forecastday)
-        commit("setForecastWeather", response.data.forecast.forecastday);
+        try{
+            if(city){
+                const url = "https://kraken-weather.herokuapp.com/api/weathers/forecast/" + city;
+                const response = await axios.get(url);
+                commit("setForecastWeather", response.data.forecast.forecastday);
+            }
+        }
+        catch(err){
+            console.log(err);
+        }
+    },
+    async searchCity({dispatch},city){
+        try{
+            if(city){
+                dispatch("fetchTodayWeather", city);
+                dispatch("fetchForecastWeather", city);
+            }
+        }
+        catch(err){
+            console.log(err);
+        }
     }
 };
 
