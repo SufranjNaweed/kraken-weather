@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath: '/kraken-weather/'
-}
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/kraken-weather/'
+      : '/kraken-weather/'
+  }
