@@ -3,17 +3,20 @@
         <div class="container">
             <Header />
             <slot />
+            <Footer />
         </div>
     </div>
 </template>
 
 <script>
 import Header from '../Header';
+import Footer from '../Footer';
 
 export default {
     name : "MainLayout",
     components : {
-        Header
+        Header,
+        Footer
     }
 }
 </script>
