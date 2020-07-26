@@ -1,23 +1,24 @@
 <template>
-    <section>
-        <Header />
+    <MainLayout>
         <Weather />
-    </section>
+    </MainLayout>
 </template>
 
 <script>
-import Header from '@/components/Header';
+import MainLayout from '@/components/MainLayout';
 import Weather from '@/components/Weather';
 
 export default {
     name : "Home",
     components : {
-        Header,
+        MainLayout,
         Weather
     }
 }
 </script>
 
 <style>
-
+*{
+    box-sizing: border-box;
+}
 </style>
