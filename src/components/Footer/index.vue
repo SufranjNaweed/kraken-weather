@@ -1,6 +1,7 @@
 <template>
   <footer>
-      <p>Made by Naweed SUFRANJ <a href="https://naweed-sufranj.fr/">https://naweed-sufranj.fr/</a></p>
+      <p>Made by Naweed SUFRANJ</p>
+      <p><a href="https://naweed-sufranj.fr/">https://naweed-sufranj.fr/</a></p>
   </footer>
 </template>
 
@@ -19,6 +20,10 @@ footer{
         text-align: center;
         font-size : 18px;
         color: #fff;
+        a{
+            word-break: break-word;
+            color: #fff;
+        }
     }
 }
 </style>
