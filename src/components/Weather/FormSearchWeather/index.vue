@@ -32,7 +32,10 @@ export default {
         display: flex;
         align-items:center;
         justify-content: center;
-        margin: 90px auto 67px;
+        margin: 35px 10px 30px;
+        @media screen and (min-width: 689px){
+            margin: 90px auto 67px;
+        }
         input[type=text]{
             max-width: 80%;
             min-height: 60px;
@@ -45,11 +48,18 @@ export default {
                 max-width: 700px;
                 min-height: 60px;
             }
+            &::placeholder{
+                font-size: 12px;
+                @media screen and (min-width: 689px){
+                    font-size: 20px;                    
+                }
+            }
         }
         input[type=submit]{
             width: 100%;
             max-width: 140px;
             min-height: 60px;
+            border-color: $greenSearchButton;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             font-weight: bold;

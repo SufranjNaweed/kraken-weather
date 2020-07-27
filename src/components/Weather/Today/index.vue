@@ -30,12 +30,16 @@ export default {
     #today{
         display: flex;
         align-items: center;
-        margin: auto auto 65px;
+        margin: auto auto 40px;
+        padding: 10px;
         width: 100%;
         max-width: 900px;
         min-height: 230px;
         border-radius: 8px;
         background-color: rgba(75, 178, 249, 0.08);
+        @media screen and (min-width: 689px){
+            margin: auto auto 65px;
+        }
         .container-today{
             display: flex;
             width: 100%;
@@ -67,7 +71,7 @@ export default {
                 .today-icon{
                     img{
                         margin: auto;
-                        width: 70px;
+                        width: 100px;
                         @media screen and (min-width: 689px){
                             width: 120px;
                         }

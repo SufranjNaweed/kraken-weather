@@ -19,6 +19,6 @@ export default {
 
 <style>
 *{
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 </style>
