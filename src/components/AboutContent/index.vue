@@ -49,7 +49,11 @@ export default {
             p{
                 margin-bottom: 10px;
                 font-size: 22px;
-                margin-left: 20px;
+                padding: 20px;
+                a{
+                    word-break: break-word;
+                    color: #fff;
+                }
             }
             ul{
                 margin-left: 20px;
